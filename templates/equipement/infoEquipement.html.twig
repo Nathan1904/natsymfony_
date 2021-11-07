@@ -1,0 +1,32 @@
+<a href= {{ path('equipement_show_all') }}>Afficher tous les équipements</a><br/>
+<a href= {{ path('equipement_ajout') }}>Formulaire d'ajout d'équipement</a><br/><br/>
+
+<table>
+
+ <thead>
+        <tr>
+            <th colspan="2">Infos équipements</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                {{nom}}
+            </td>
+            <td>
+                {{marque}}
+            </td>
+            <td>
+               {{prix}} &emsp;&emsp;
+            </td>
+            <td>
+                {{description}} &emsp;
+            </td>
+            <td>
+                {{quantite}}
+            </td>
+        </tr>
+
+    </tbody>
+</table>

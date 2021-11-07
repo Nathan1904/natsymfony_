@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+
+<a href= {{ path('equipement_show_all') }}>Revenir aux équipements</a> <br/><br/><br/><br/> 
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom) }}<br/><br/>
+   
+        {{ form_label(form.marque) }}
+        {{ form_widget(form.marque) }}<br/><br/>
+
+        {{ form_label(form.prix) }}
+        {{ form_widget(form.prix) }}<br/><br/>
+
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}<br/><br/>
+
+        {{ form_label(form.quantite) }}
+        {{ form_widget(form.quantite) }}<br/><br/>
+
+        {{ form_rest(form) }}
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}

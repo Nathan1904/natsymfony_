@@ -1,0 +1,33 @@
+<a href= {{ path('equipement_ajout') }}>Formulaire d'ajout d'équipement</a><br/><br/>
+
+<table>
+
+ <thead>
+        <tr>
+            <th colspan="2">Liste de tous les équipements</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for equipement in equipements %}
+        <tr>
+            <td>
+                <a href= {{path('equipement_info', {nom:equipement.nom}) }} >{{equipement.nom}}</a>
+            </td>
+            <td>
+                {{equipement.marque}}
+            </td>
+            <td>
+                {{equipement.prix}}
+            </td>
+            <td>
+                {{equipement.description}} 
+            </td>
+            <td>
+                {{equipement.quantite}}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
